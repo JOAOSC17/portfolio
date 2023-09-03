@@ -1,5 +1,9 @@
-import { Box, Container, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { Box, Button, Container, Heading, Image, Link, useColorModeValue } from '@chakra-ui/react'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+//import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
   return (
@@ -36,7 +40,42 @@ const Page = () => {
         <Heading as="h3" variant="section-title">
             Work
         </Heading>
-        <p>Paragraph</p>
+        <Paragraph>
+          I am a freelance and a full-stack developer based in Brazil with a
+          passion for building digital services/stuff. I believe code can solving real-life problems.
+        </Paragraph>
+        <Box align="center" my={4}>
+          <Link as={NextLink} href='/works'>
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              colorScheme='teal'
+              >
+                My portifolio
+              </Button>
+          </Link>
+        </Box>
+      </Section>
+      {/* <Section delay={0.2}>
+        <Heading as="h3" variant="section-tittle">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1984</BioYear>
+          Born in Brasil.
+        </BioSection>
+        <BioSection>
+          <BioYear>1984</BioYear>
+          Born in Brasil.
+          &apos;s
+        </BioSection>
+      </Section> */}
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I ♥
+        </Heading>
+        <Paragraph>
+          Art, Music, beaches, design, languages.
+        </Paragraph>
       </Section>
     </Container>
   )
