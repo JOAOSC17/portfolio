@@ -1,10 +1,30 @@
 import NextLink from 'next/link'
-import { Box, Button, Container, Heading, Image, Link, useColorModeValue } from '@chakra-ui/react'
+import { 
+  Box, 
+  Button, 
+  Container, 
+  Heading, 
+  Image, 
+  Link, 
+  List,
+  ListItem,
+  SimpleGrid,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
+import { GridItem } from '../components/grid-item'
 //import { BioSection, BioYear } from '../components/bio'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+} from 'react-icons/io'
+import {
+  IoLogoDiscord,
+} from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -78,6 +98,49 @@ const Page = () => {
           <Paragraph>
             Art, Music, beaches, design, languages.
           </Paragraph>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href='https://github.com/JOAOSC17' target='_blank'>
+                <Button variant="ghost" colorScheme='teal' leftIcon={<IoLogoGithub />}>@joaosc17</Button>
+              </Link>
+            </ListItem>
+            {/* <ListItem>
+              <Link href='https://twitter.com/jovicosta_' target='_blank'>
+                <Button variant="ghost" colorScheme='teal' leftIcon={<IoLogoTwitter />}>@jovicosta_</Button>
+              </Link>
+            </ListItem> */}
+            <ListItem>
+              <Link href='https://discordapp.com/users/718808731999272989' target='_blank'>
+                <Button variant="ghost" colorScheme='teal' leftIcon={<IoLogoDiscord />}>@jovicosta</Button>
+              </Link>
+            </ListItem>
+            {/* <ListItem>
+              <Link href='https://discordapp.com/users/718808731999272989' target='_blank'>
+                <Button variant="ghost" colorScheme='teal' leftIcon={<IoLogoInstagram />}>@jovicosta</Button>
+              </Link>
+            </ListItem> */}
+          </List>
+          {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <GridItem
+            href="https://www.youtube.com/devaslife"
+            title="Dev as Life"
+            thumbnail={thumbYouTube}
+          >
+            My YouTube channel (&gt;150k subs)
+          </GridItem>
+          <GridItem
+            href="https://www.inkdrop.app/"
+            title="Inkdrop"
+            thumbnail={thumbInkdrop}
+          >
+            A Markdown note-taking app
+          </GridItem>
+        </SimpleGrid> */}
         </Section>
       </Container>
     </Layout>
