@@ -20,6 +20,7 @@ import { GridItem } from '../components/grid-item'
 import {
   IoLogoTwitter,
   IoLogoInstagram,
+  IoLogoLinkedin,
   IoLogoGithub,
 } from 'react-icons/io'
 import {
@@ -114,6 +115,11 @@ const Page = () => {
                 <Button variant="ghost" colorScheme='teal' leftIcon={<IoLogoTwitter />}>@jovicosta_</Button>
               </Link>
             </ListItem> */}
+            <ListItem>
+              <Link href='https://www.linkedin.com/in/joaosc17' target='_blank'>
+                <Button variant="ghost" colorScheme='teal' leftIcon={<IoLogoLinkedin />}>@joaosc17</Button>
+              </Link>
+            </ListItem>
             <ListItem>
               <Link href='https://discordapp.com/users/718808731999272989' target='_blank'>
                 <Button variant="ghost" colorScheme='teal' leftIcon={<IoLogoDiscord />}>@jovicosta</Button>
